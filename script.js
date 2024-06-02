@@ -50,7 +50,7 @@ function displayWeather(data) {
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
-        const temperatureHTML = `<p>${temperature}°C</p>`;
+        const temperatureHTML = `<p>${temperature}\u00B0C</p>`;
         const weatherHTML = `
             <p>${cityName}</p>
             <p>${description}</p>
