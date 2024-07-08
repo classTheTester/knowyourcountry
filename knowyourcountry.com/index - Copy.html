@@ -12,8 +12,18 @@
 
     </head> 
 
-    <body>
+    <body
+        <script>
+            fetch('https://timeapi.io/api/Time/current/zone?timeZone=America/Vancouver')
+            .then(response => response.json())
+            .then(data => {
+                // Display the JSON data in the div with id 'jsonData'
+                document.getElementById('jsonData').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+        </script>
     <section class="header">
+        
        <div class="text-box">
            <h5>Unleash Your Adventure</h5>
            <p>
@@ -21,12 +31,7 @@
            </p>
             <a href="home-page.html" class="hero-btn">Know your country</a>
        
-            <section class ="pyscript">
-                <script type = "py">
-                from pyscript import display
-                print("welcome to our site!")
-                </script>
-           </section>
+           
        
        </div>
 
